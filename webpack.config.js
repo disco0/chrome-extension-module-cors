@@ -3,7 +3,7 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: ['babel-polyfill', './src/index.js'],
-  output: { path: path.resolve('.'), filename: 'bundle.js' },
+  output: { path: path.resolve('./app'), filename: 'bundle.js' },
   module: {
     rules: [{
       test: /\.jsx?$/, loader: 'babel-loader',
