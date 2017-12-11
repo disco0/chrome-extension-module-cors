@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "version": "1.0.0",
+  "name": "chrome-extension-module-cors",
+  "description": "",
+  "permissions": [
+    "<all_urls>", 
+    "background", 
+    "webRequest", 
+    "storage"
+  ],
+  "web_accessible_resources": ["bundle.js"],
+  "background": { "scripts": ["bundle.js"] },
+  "content_scripts": [
+    { "matches": ["*://*/*"], "js": ["bundle.js"] }
+  ]
+}
